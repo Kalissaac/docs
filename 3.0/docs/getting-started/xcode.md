@@ -1,6 +1,6 @@
 # Xcode
 
-If you're on a Mac, you can develop your Vapor project using Xcode. 
+If you're on a Mac, you can develop your Vapor project using Xcode.
 You can build, run, and stop your server from within Xcode, as well as use breakpoints and instruments to debug your code.
 
 <img width="1072" alt="Xcode 9 running Vapor" src="https://user-images.githubusercontent.com/1342803/32910761-1f8dd56e-cad8-11e7-9869-feccf89f775e.png">
@@ -12,7 +12,7 @@ Xcode is a great way to develop Vapor apps, but you can use any text editor you 
 To use Xcode, you just need to generate an Xcode project using [Vapor Toolbox](toolbox.md).
 
 ```sh
-vapor xcode
+vapor3 xcode
 ```
 
 !!! tip

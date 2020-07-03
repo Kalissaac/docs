@@ -47,7 +47,7 @@ brew install vapor/tap/vapor3
 Double check the installation was successful by opening Terminal and running:
 
 ```sh
-vapor --help
+vapor3 --help
 ```
 
 You should see a long list of available commands.

@@ -1,11 +1,11 @@
 # Managing your project
 
-The Swift Package Manager (SPM for short) is used for building your project's source code and dependencies. 
-It's a similar idea to Cocoapods, Ruby gems, and NPM. Most of the time the [Vapor Toolbox](toolbox.md) will 
+The Swift Package Manager (SPM for short) is used for building your project's source code and dependencies.
+It's a similar idea to Cocoapods, Ruby gems, and NPM. Most of the time the [Vapor Toolbox](toolbox.md) will
 interact with SPM on your behalf. However, it's important to understand the basics.
 
 !!! tip
-    Learn more about SPM on <a href="https://swift.org/package-manager/" target="_blank">Swift.org &rarr;</a> 
+    Learn more about SPM on <a href="https://swift.org/package-manager/" target="_blank">Swift.org &rarr;</a>
 
 ## Package Manifest
 
@@ -24,7 +24,7 @@ import PackageDescription
 let package = Package(
     name: "VaporApp",
     dependencies: [
-        // 💧 A server-side Swift web framework. 
+        // 💧 A server-side Swift web framework.
         .package(url: "https://github.com/vapor/vapor.git", from: "3.0.0"),
     ],
     targets: [ ... ]
@@ -37,11 +37,11 @@ When you add a dependency to your package, you must next signal which [targets](
 the newly available modules.
 
 !!! warning
-    Anytime you modify the package manifest, call `vapor update` to effect the changes.
+    Anytime you modify the package manifest, call `vapor3 update` to effect the changes.
 
 ### Targets
 
-Targets are all of the modules, executables, and tests that your package contains. 
+Targets are all of the modules, executables, and tests that your package contains.
 
 ```swift
 // swift-tools-version:4.0
@@ -84,7 +84,7 @@ Below is the typical folder structure for an SPM package.
 └── Package.swift
 ```
 
-Each `.target` corresponds to a folder in the `Sources` folder. 
+Each `.target` corresponds to a folder in the `Sources` folder.
 Each `.testTarget` corresponds to a folder in the `Tests` folder.
 
 ## Troubleshooting
@@ -92,5 +92,5 @@ Each `.testTarget` corresponds to a folder in the `Tests` folder.
 If you are experiencing problems with SPM, sometimes cleaning your project can help.
 
 ```sh
-vapor clean
+vapor3 clean
 ```

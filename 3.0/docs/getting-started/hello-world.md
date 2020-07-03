@@ -11,7 +11,7 @@ For this guide, we will call the project `Hello`.
 Open up your terminal, and use [Vapor Toolbox's `new`](toolbox.md#new) command.
 
 ```sh
-vapor new Hello
+vapor3 new Hello
 ```
 
 Once that finishes, change into the newly created directory.
@@ -26,7 +26,7 @@ Let's now use the [Vapor Toolbox's `xcode`](toolbox.md) command to generate an X
 This will allow us to build and run our app from inside of Xcode, just like an iOS app.
 
 ```sh
-vapor xcode
+vapor3 xcode
 ```
 
 The toolbox will ask you if you'd like to open Xcode automatically, select `yes`.

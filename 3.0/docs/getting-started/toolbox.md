@@ -11,13 +11,13 @@ Installation (Ubuntu): [Install &rarr; Ubuntu](../install/ubuntu.md)
 Help prints useful information about available commands and flags.
 
 ```sh
-vapor --help
+vapor3 --help
 ```
 
 You can also run the `--help` option on any Toolbox command.
 
 ```sh
-vapor new --help
+vapor3 new --help
 ```
 
 The `--help` flag should be your goto for learning about the toolbox as it is the most up-to-date.
@@ -27,7 +27,7 @@ The `--help` flag should be your goto for learning about the toolbox as it is th
 The Toolbox's most important feature is helping you create a new project.
 
 ```sh
-vapor new <name>
+vapor3 new <name>
 ```
 
 Just pass the name of your project as the first argument to the `new` command.
@@ -55,14 +55,14 @@ a different template by passing the `--template` flag.
 You can use the toolbox to build and run your Vapor app.
 
 ```sh
-vapor build
-vapor run
+vapor3 build
+vapor3 run
 ```
 
 !!! tip
-    We recommend building and running through [Xcode](xcode.md) if you have a Mac. 
-    It's a bit faster and you can set breakpoints! 
-    Just use `vapor xcode` to generate an Xcode project.
+    We recommend building and running through [Xcode](xcode.md) if you have a Mac.
+    It's a bit faster and you can set breakpoints!
+    Just use `vapor3 xcode` to generate an Xcode project.
 
 ## Updating
 

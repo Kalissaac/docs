@@ -56,12 +56,12 @@ let package = Package(
 Don't forget to add the module as a dependency in the `targets` array. Once you have added the dependency, regenerate your Xcode project with the following command:
 
 ```sh
-vapor xcode
+vapor3 xcode
 ```
 
 ## Creating a Model
 
-Now let's create your first model. Models represent tables in your database and they are the primary method of interacting with your data. 
+Now let's create your first model. Models represent tables in your database and they are the primary method of interacting with your data.
 
 Each driver provides convenience model protocols (`PostgreSQLModel`, `SQLiteModel`, etc) that extend Fluent's base [`Model`](https://api.vapor.codes/fluent/latest/Fluent/Protocols/Model.html) protocol. These convenience types make declaring models more concise by using standard values for ID key and type.
 
@@ -103,7 +103,7 @@ Take a look at [Fluent &rarr; Model](models.md) for more information on creating
 
 Now that you have a model, you can configure your database. This is done in [`configure.swift`](../getting-started/structure.md#configureswift).
 
-### Register Provider 
+### Register Provider
 
 The first step is to register your database driver's provider.
 
@@ -117,11 +117,11 @@ try services.register(Fluent<#Database#>Provider())
 // Other services....
 ```
 
-Registering the provider will add all of the services required for your Fluent database to work properly. It also includes a default database config struct that uses typical development environment credentials. 
+Registering the provider will add all of the services required for your Fluent database to work properly. It also includes a default database config struct that uses typical development environment credentials.
 
 ### Custom Credentials
 
-If you are using default configuration for your database (such as default credentials or other config) then this may be the only setup you need to perform. 
+If you are using default configuration for your database (such as default credentials or other config) then this may be the only setup you need to perform.
 
 See the documentation for your specific database type for more information about custom configuration.
 
@@ -144,7 +144,7 @@ import Fluent<#Database#>
 import Vapor
 
 extension User: <#Database#>Migration { }
-``` 
+```
 
 Take a look at [Fluent &rarr; Migration](../fluent/migrations.md) if you are interested in learning more about custom migrations.
 
@@ -189,7 +189,7 @@ If you run your app, and query that route, you should see an empty array returne
 
 ## Raw Queries
 
-With Fluent, you always have access to the underlying database driver. Using this underlying driver to perform a query is sometimes called a "raw query". 
+With Fluent, you always have access to the underlying database driver. Using this underlying driver to perform a query is sometimes called a "raw query".
 
 To perform raw queries, you need access to a database connection. Vapor's [`Request`](https://api.vapor.codes/vapor/latest/Vapor/Classes/Request.html) type has a number of conveniences for creating new database connections. The recommended method is `withPooledConnection(to:)`.  Learn about other methods in [DatabaseKit &rarr; Overview &rarr; Connections](../../database-kit/overview/#connections).
 

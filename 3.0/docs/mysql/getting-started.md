@@ -44,7 +44,7 @@ let package = Package(
 Don't forget to add the module as a dependency in the `targets` array. Once you have added the dependency, regenerate your Xcode project with the following command:
 
 ```sh
-vapor xcode
+vapor3 xcode
 ```
 
 ### Config
@@ -62,7 +62,7 @@ Registering the provider will add all of the services required for MySQL to work
 
 #### Customizing Config
 
-You can of course override the default configuration provided by `MySQLProvider` if you'd like. 
+You can of course override the default configuration provided by `MySQLProvider` if you'd like.
 
 To configure your database manually, register a [`DatabasesConfig`](https://api.vapor.codes/database-kit/latest/DatabaseKit/Structs/DatabasesConfig.html) struct to your services.
 
@@ -78,7 +78,7 @@ services.register(databases)
 
 See [`MySQLDatabase`](https://api.vapor.codes/mysql/latest/MySQL/Classes/MySQLDatabase.html) and [`MySQLDatabaseConfig`](https://api.vapor.codes/mysql/latest/MySQL/Structs/MySQLDatabaseConfig.html) for more information.
 
-MySQL's default database identifier is `.mysql`. You can create a custom identifier if you want by extending [`DatabaseIdentifier`](https://api.vapor.codes/database-kit/latest/DatabaseKit/Structs/DatabaseIdentifier.html). 
+MySQL's default database identifier is `.mysql`. You can create a custom identifier if you want by extending [`DatabaseIdentifier`](https://api.vapor.codes/database-kit/latest/DatabaseKit/Structs/DatabaseIdentifier.html).
 
 ### Query
 
@@ -99,7 +99,7 @@ router.get("sql") { req in
 }
 ```
 
-Visiting this route should display your MySQL version. 
+Visiting this route should display your MySQL version.
 
 Here we are making use database connection pooling. You can learn more about creating connections in [DatabaseKit &rarr; Getting Started](../database-kit/getting-started.md).
 

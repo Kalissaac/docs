@@ -1,12 +1,12 @@
 # Jobs
 
-Jobs ([vapor-community/jobs](https://github.com/vapor/jobs)) is a pure Swift queuing system that allows you to offload task responsibility to a side worker. 
+Jobs ([vapor-community/jobs](https://github.com/vapor/jobs)) is a pure Swift queuing system that allows you to offload task responsibility to a side worker.
 
 Some of the tasks this package works well for:
 
 - Sending emails outside of the main request thread
-- Performing complex or long-running database operations 
-- Ensuring job integrity and resilience 
+- Performing complex or long-running database operations
+- Ensuring job integrity and resilience
 - Speeding up response time by delaying non-critical processing
 - Scheduling jobs to occur at a specific time
 
@@ -25,7 +25,7 @@ Jobs currently has support for the following drivers which interface with the ma
 - [JobsPostgresqlDriver](https://github.com/vapor-community/jobs-postgresql-driver)
 
 !!! tip
-    You should not install this package directly unless you are building a new driver. Install one of the driver packages instead. 
+    You should not install this package directly unless you are building a new driver. Install one of the driver packages instead.
 
 ## Getting Started
 
@@ -33,7 +33,7 @@ Let's take a look at how you can get started using Jobs.
 
 ### Package
 
-The first step to using Jobs is adding one of the drivers as a dependency to your project in your SPM package manifest file. In this example, we'll use the Redis driver. 
+The first step to using Jobs is adding one of the drivers as a dependency to your project in your SPM package manifest file. In this example, we'll use the Redis driver.
 
 ```swift
 // swift-tools-version:5.1
@@ -62,7 +62,7 @@ open Package.swift
 Or:
 
 ```sh
-vapor xcode
+vapor3 xcode
 ```
 
 ### Config
@@ -100,11 +100,11 @@ services.register { container -> JobsConfig in
 
 ### Persistence Layer Config
 
-To register a persistence driver, see the driver's specific instructions. 
+To register a persistence driver, see the driver's specific instructions.
 
 ### Running Workers as Processes
 
-To start a new queue worker, run `vapor run jobs`. You can also specify a specific type of worker to run: `vapor run jobs --queue emails`.
+To start a new queue worker, run `vapor3 run jobs`. You can also specify a specific type of worker to run: `vapor3 run jobs --queue emails`.
 
 !!! tip
     Workers should stay running in production. Consult your hosting provider to find out how to keep long-running processes alive. Heroku, for example, allows you to specify "worker" dynos like this in your Procfile: `worker: Run run jobs`

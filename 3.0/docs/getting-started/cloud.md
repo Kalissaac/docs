@@ -1,6 +1,6 @@
 # Deployment
 
-Deploying code is the process of making your Vapor project publically available. 
+Deploying code is the process of making your Vapor project publically available.
 It can be one of the most difficult aspects of web development. Fortunately, there
 are services to help.
 
@@ -14,7 +14,7 @@ Deploying your project to Vapor Cloud is simple, it's built right into the [Vapo
 Just run this command from within the root directory of your project.
 
 ```sh
-vapor cloud deploy
+vapor3 cloud deploy
 ```
 
 For a detailed guide, visit [Vapor Cloud &rarr; Quick Start](https://docs.vapor.cloud/quick-start/).

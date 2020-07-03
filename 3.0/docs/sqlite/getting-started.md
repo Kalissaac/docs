@@ -44,7 +44,7 @@ let package = Package(
 Don't forget to add the module as a dependency in the `targets` array. Once you have added the dependency, regenerate your Xcode project with the following command:
 
 ```sh
-vapor xcode
+vapor3 xcode
 ```
 
 ### Config
@@ -62,7 +62,7 @@ Registering the provider will add all of the services required for SQLite to wor
 
 #### Customizing Config
 
-You can of course override the default configuration provided by `SQLiteProvider` if you'd like. 
+You can of course override the default configuration provided by `SQLiteProvider` if you'd like.
 
 SQLite supports in-memory and file-based persistance. To configure your database manually, register a [`DatabasesConfig`](https://api.vapor.codes/database-kit/latest/DatabaseKit/Structs/DatabasesConfig.html) struct to your services.
 
@@ -78,7 +78,7 @@ services.register(databases)
 
 See [`SQLiteDatabase`](https://api.vapor.codes/sqlite/latest/SQLite/Classes/SQLiteDatabase.html) and [`SQLiteStorage`](https://api.vapor.codes/sqlite/latest/SQLite/Enums/SQLiteStorage.html) for more information.
 
-SQLite's default database identifier is `.sqlite`. You can create a custom identifier if you want by extending [`DatabaseIdentifier`](https://api.vapor.codes/database-kit/latest/DatabaseKit/Structs/DatabaseIdentifier.html). 
+SQLite's default database identifier is `.sqlite`. You can create a custom identifier if you want by extending [`DatabaseIdentifier`](https://api.vapor.codes/database-kit/latest/DatabaseKit/Structs/DatabaseIdentifier.html).
 
 ### Query
 
@@ -100,7 +100,7 @@ router.get("sql") { req in
 }
 ```
 
-Visiting this route should display your SQLite version. 
+Visiting this route should display your SQLite version.
 
 Here we are making use database connection pooling. You can learn more about creating connections in [DatabaseKit &rarr; Getting Started](../database-kit/getting-started.md).
 
