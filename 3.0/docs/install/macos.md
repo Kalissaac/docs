@@ -36,7 +36,7 @@ The toolbox includes all of Vapor's dependencies as well as a handy CLI tool for
 
 ```sh
 brew tap vapor/tap
-brew install vapor/tap/vapor
+brew install vapor/tap/vapor3
 ```
 
 !!! tip
